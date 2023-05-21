@@ -1,0 +1,45 @@
+Inscription d'un utilisateur
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+Connexion d'un utilisateur
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "password"
+}
+
+Création d'une ressource
+POST http://localhost:3000/resources
+Authorization: Bearer <TOKEN>
+Content-Type: application/json
+
+{
+  "title": "Ma première ressource",
+  "content": "Contenu de ma première ressource"
+}
+
+Lecture de toutes les ressources
+GET http://localhost:3000/resources
+Authorization: Bearer <TOKEN>
+
+Mise à jour d'une ressource
+PUT http://localhost:3000/resources/<RESOURCE_ID>
+Authorization: Bearer <TOKEN>
+Content-Type: application/json
+
+{
+  "title": "Nouveau titre",
+  "content": "Nouveau contenu"
+}
+
+Suppression d'une ressource
+DELETE http://localhost:3000/resources/<RESOURCE_ID>
+Authorization: Bearer <TOKEN>
